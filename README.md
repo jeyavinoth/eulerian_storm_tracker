@@ -13,6 +13,7 @@ if multiple years are provided then the time variable has to continue and should
 OUTPUTS: daily output data, and the daily time variable (days since start year)
 
 <br>
+
 daily\_diff --> computes the daily difference, i.e X(t+1) - X(t)
 
 INPUTS: daily\_data
@@ -20,6 +21,7 @@ INPUTS: daily\_data
 OUTPUTS: difference in daily data
 
 <br> 
+
 std\_dev --> 
 
   INPUTS: daily data, start year, time array as days since start year
@@ -30,7 +32,7 @@ std\_dev -->
 
   OUTPUTS: standard\_deviation for the given time\_period, and the time array that corresponds to the std\_dev output (i.e. for yearly it will be the years)
   
-  time vaiable has to be specified in days, since start\_year [1,2,3,4,5,6,7...8760, 8766,... ]
+  time vaiable has to be specified in days, since start\_year [1,2,3,4,5,6,7...365, 366, 367,... ]
 
   time\_period can be 'yearly', 'seasonally', or 'all'. Default='all' means standard deviation avarage of all years
 
