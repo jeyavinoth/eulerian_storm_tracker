@@ -10,20 +10,20 @@ import os
 
 ### Prep the data initially for the Eulerian Storm Track Code
 year = [2011, 2012]
-era_folder = '/mnt/drive5/ERAINTERIM/U10/'
+era_folder = '/mnt/drive5/ERAINTERIM/V10/'
 
 time = []
 data = np.array([])
 tot_time = 0
 for i_year in range(year[0], year[1]+1): 
-  era_file = os.path.join(era_folder, 'U10_%d.nc'%(i_year)) 
+  era_file = os.path.join(era_folder, 'V10_%d.nc'%(i_year)) 
 
   nc = Dataset(era_file, 'r')
   nc.set_always_mask(False)
   in_lat = nc.variables['lat'][:]
   in_time = nc.variables['time'][:]
   in_lon = nc.variables['lon'][:]
-  in_data = nc.variables['var165'][:]
+  in_data = nc.variables['var166'][:]
   nc.close()
 
   # stacking slp arrays
