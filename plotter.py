@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
+# Importing Python packages to create plots
 import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap
 import numpy as np 
+import os
 
-def plot(lonGrid, latGrid, data, show=True):
+def plot(lonGrid, latGrid, data, show=True, out_file=''):
 
   lllat = np.nanmin(latGrid) 
   urlat = np.nanmax(latGrid) 
@@ -23,3 +25,8 @@ def plot(lonGrid, latGrid, data, show=True):
 
   if (show):
     plt.show()
+
+  if (len(out_file) > 0):
+    out_full_file = os.environ['fig_out_folder'] + out_file
+    plt.save_fig(out_full_file)
+
